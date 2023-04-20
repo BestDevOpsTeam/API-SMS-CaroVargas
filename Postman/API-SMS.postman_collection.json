@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "43b64851-6a60-44bb-ac51-18bd61daffa4",
+		"name": "API-SMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3014/api/v1/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3014",
+					"path": [
+						"api",
+						"v1",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar SMS ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"celular\": \"573002622217\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3014/api/v1/sms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3014",
+					"path": [
+						"api",
+						"v1",
+						"sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar SMS Error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3014/api/v1/sms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3014",
+					"path": [
+						"api",
+						"v1",
+						"sms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
