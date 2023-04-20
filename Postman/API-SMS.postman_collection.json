@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "43b64851-6a60-44bb-ac51-18bd61daffa4",
+		"_postman_id": "4d514b3d-cbe7-412d-9329-e337407bbe84",
 		"name": "API-SMS",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24488478"
 	},
 	"item": [
 		{
@@ -24,12 +25,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3014/api/v1/health",
+					"raw": "http://localhost:3002/api/v1/health",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3014",
+					"port": "3002",
 					"path": [
 						"api",
 						"v1",
@@ -40,7 +41,7 @@
 			"response": []
 		},
 		{
-			"name": "Enviar SMS ok",
+			"name": "Enviar SMS",
 			"event": [
 				{
 					"listen": "test",
@@ -59,7 +60,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \r\n    \"celular\": \"573002622217\" \r\n}",
+					"raw": "{ \r\n    \"celular\": \"573232376372\" \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -67,12 +68,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3014/api/v1/sms",
+					"raw": "http://localhost:3002/api/v1/sms",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3014",
+					"port": "3002",
 					"path": [
 						"api",
 						"v1",
@@ -101,12 +102,12 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3014/api/v1/sms",
+					"raw": "http://localhost:3002/api/v1/sms",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3014",
+					"port": "3002",
 					"path": [
 						"api",
 						"v1",
