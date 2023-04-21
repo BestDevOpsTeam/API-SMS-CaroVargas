@@ -1,5 +1,5 @@
-var axios = require('axios');
-var endoint = 'https://api.juancarlosparragalan.com/prodsms/api/v1/smsmessage'
+let axios = require('axios');
+let endoint = 'https://api.juancarlosparragalan.com/prodsms/api/v1/smsmessage'
 async function sendSMS(phoneNumber, name) {
     let response = {}
     if(!phoneNumber){
@@ -9,7 +9,7 @@ async function sendSMS(phoneNumber, name) {
         }
         return response;
     }else{
-        var bodyrequest = {
+        let bodyrequest = {
             phoneNumber: phoneNumber,
         }
         response = await axios.post(endoint, bodyrequest);
